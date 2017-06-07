@@ -12,6 +12,4 @@ Terima kasih.
 
 3. Jalankan perintah `npm install`
 
-4. Copy isi folder modules_tambahan/@remobile ke dalam folder node_modules/@remobile
-
-5. Jalankan perintah `react-native run-android`
+4. Jalankan perintah `react-native run-android`

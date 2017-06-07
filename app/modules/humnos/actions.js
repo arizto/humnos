@@ -42,7 +42,7 @@ export function filterByID(isNew = false) {
 	    });
 
 	    var lists = getState().get('humnos').get('lists'),
-	        limit = 30,
+	        limit = (isNew) ? 50 : 30,
 	    	next = getState().get('humnos').get('filter').get('next'),
 	    	stop = next + (limit - 1),
 	    	newData = [],

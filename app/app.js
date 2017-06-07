@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react'; 
-import { View, Text, StyleSheet, Platform, StatusBar, InteractionManager } from 'react-native';
+import { View, Text, StyleSheet, Platform, StatusBar, Image, InteractionManager } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
@@ -9,8 +9,6 @@ import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 
 import * as configs from './constants/configs';
-
-import SplashScreen from '@remobile/react-native-splashscreen';
 
 import Router from 'react-native-simple-router';
 import HeaderTitle from './components/HeaderTitle';
@@ -52,7 +50,7 @@ class App extends Component {
                 this.props.actions.embunPagi.setIdle();
                 //requestAnimationFrame(() => {
                     this.setState({loading: false});
-                    SplashScreen.hide();
+                    //SplashScreen.hide();
                 //})
                 
             })
@@ -243,7 +241,14 @@ class App extends Component {
             );
         }
 
-        return <View />
+        return (
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Image 
+                    style={{width: configs.dimension.width, height: configs.dimension.height}}
+                    resizeMode={'stretch'}
+                    source={require('./images/splash.png')} />
+            </View>
+        )
     
     }
 

@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.remobile.splashscreen.*;
 import org.pgsqlite.SQLitePluginPackage;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -28,7 +27,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new VectorIconsPackage(),
-          new RCTSplashScreenPackage(),
           new SQLitePluginPackage()
       );
     }

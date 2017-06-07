@@ -1,7 +1,10 @@
 import { Dimensions, StyleSheet } from 'react-native';
 
-export const server = 'http://192.168.1.3';
-export const server_api = server+'/gk/api/';
+export const server = 'http://api.vivaeleos.org';
+export const server_api = server+'/';
+
+//export const server = 'http://192.168.1.3';
+//export const server_api = server+'/gk/api/';
 
 export const dbDebug = false;
 

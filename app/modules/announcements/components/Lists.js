@@ -11,6 +11,8 @@ import * as actions from '../actions'
 
 import * as configs from '../../../constants/configs';
 
+const height = (configs.dimension.height / 1.5 ) - 125
+
 class Lists extends Component {
 
     constructor(props) {
@@ -51,7 +53,7 @@ class Lists extends Component {
                     
                     <Swiper dotColor={'white'} 
                         activeDotColor={configs.color.themes.accent_secondary} 
-                        height={250} horizontal={true} 
+                        height={height} horizontal={true} 
                         paginationStyle={{
                             bottom: 10
                         }} 
@@ -128,7 +130,7 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         color: configs.color.font.primary,
         lineHeight: 30,
-        height: 100,
+        height: height - 150,
         overflow: 'hidden'
     },
     contentContainer: {
